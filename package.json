@@ -1,17 +1,15 @@
 {
   "name": "frontend-test",
   "version": "1.0.0",
-  "description": "",
+  "description": "## There are two tests involved",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "less": "^4.2.0",
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.71.0"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
   }
 }

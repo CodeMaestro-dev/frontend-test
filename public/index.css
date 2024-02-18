@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+    font-family: Trebuchet MS;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 1600px;
+    background: #000000f8;
+    background-image: url("./assets/showdown/header.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* background-blend-mode: darken;*/
+}
+
+.loader{
+  position: fixed;
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+background: #000000f8;
+    background-image: url("./assets/showdown/header.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+ color:white;
+ font-size: 50px;
+ font-weight: 700;
+ z-index: 1111;
+}
+
+canvas{
+    width: 100vw;
+    height: 70vh;
+    background: black;
+}
+
+div#container{
+    width: 100%;
+    background: transparent;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 5px 300px 5px;
+}
+
+.wheelCont{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker{
+  position: absolute;
+  top: -60px;
+  
+}
+
+#wheel{
+    height: auto;
+}
+
+#btn{
+    height: auto;
+}
+
+.spinbtn{
+  filter: hue-rotate(0deg) brightness(150%) contrast(100%) saturate(100%);
+}
+
+
+.rotating {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(3000deg);
+  }
+}
+
+#wheel {
+  transition: transform 5s ease-in-out; 
+}
+
+
+.rot-pos-1-0{
+  transform: rotate(0deg);
+}
+
+.rot-pos-2-0{
+  transform: rotate(90deg);
+}
+
+.rot-pos-3-0{
+  transform: rotate(180deg);
+}
+
+.rot-pos-4-0{
+  transform: rotate(270deg);
+}
+
+.rot-pos-1-1{
+  transform: rotate(45deg);
+}
+
+.rot-pos-1-2{
+  transform: rotate(20deg);
+}
+
+.rot-pos-1-3{
+  transform: rotate(55deg);
+}
+
+.rot-pos-2-1{
+  transform: rotate(110deg);
+}
+
+.rot-pos-2-2{
+  transform: rotate(140deg);
+}
+
+.rot-pos-2-3{
+  transform: rotate(170deg);
+}
+
+.rot-pos-3-1{
+  transform: rotate(200deg);
+}
+
+.rot-pos-3-2{
+  transform: rotate(235deg);
+}
+
+.rot-pos-3-3{
+  transform: rotate(250deg);
+}
+
+.rot-pos-4-1{
+  transform: rotate(280deg);
+}
+
+.rot-pos-4-2{
+  transform: rotate(300deg);
+}
+
+.rot-pos-4-3{
+  transform: rotate(340deg);
+}
+
+.winCardCont{
+  position: fixed;
+  background-color: #ffffff23;
+  backdrop-filter: blur(3px);
+  width:100vw;
+  height:100vh;
+  z-index: 11;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: not-allowed;
+}
+.winCard{
+  border-radius: 10px;
+  background: #fff;
+  width: 600px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.avatarCont{
+  position: relative;
+}
+
+.avatar{
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.winMarker{
+  position: absolute;
+  width:30px;
+  height: auto;
+  bottom: 0;
+  right: -10px;
+}
+
+h1{
+  color: gold;
+}
+
+p{
+  font-weight: bold;
+}
+
+button{
+  font-weight: bold;
+  color:white;
+  background: #23d223;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-size: 24px;
+}
+
+button:hover{
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+
+
+@media (max-width: 1200px) {
+    canvas{
+        height: 60vh;
+    }
+
+    #wheel{
+        width: 500px;
+    }
+
+    #btn{
+        width: 300px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    canvas{
+        height: 40vh;
+    }
+
+    #wheel{
+        width: 300px;
+    }
+
+    #btn{
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    canvas{
+        height: 35vh;
+    }
+
+    div#container{
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    }
+
+    #wheel{
+        width: 300px;
+    }
+
+    #btn{
+        width: 300px;
+    }
+    
+.winCard{
+  width: 500px;
+}
+}
+
+@media (max-width: 576px) {
+    canvas{
+        height: 30vh;
+    }
+
+    #wheel{
+        width: 300px;
+    }
+
+    #btn{
+        width: 200px;
+    }
+    
+.winCard{
+  width: 100%;
+}
+}
+
+@media (max-width: 480px) {
+    canvas{
+        height: 25vh;
+    }
+
+    #wheel{
+        width: 200px;
+    }
+
+    #btn{
+        width: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    canvas{
+        height: 20vh;
+    }
+
+    #wheel{
+        width: 200px;
+    }
+
+    #btn{
+        width: 150px;
+    }
+    
+.winCardCont{
+  padding: 5px;
+}
+}
